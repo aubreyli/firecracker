@@ -163,6 +163,10 @@ Linux:
 
    for dir in dev proc run sys var; do mkdir /my-rootfs/${dir}; done
 
+   # set the root password
+   chroot /my-rootfs
+   passwd
+   
    # All done, exit docker shell.
    exit
    ```
